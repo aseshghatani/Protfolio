@@ -46,10 +46,11 @@ export default function HomePage() {
                 <p>View My Works</p>
               </a>
               <a
-                href="#contact"
+                href="/resume/Asesh_Resume_New.pdf"
+                target="_blank"
                 className="flex items-center hover:shadow-md transition-all duration-300  px-5 py-2 rounded-md  text-black border border-gray-300"
               >
-                <p>Get in Touch</p>
+                <p>Download Resume</p>
               </a>
             </div>
           </div>
