@@ -12,6 +12,9 @@ import {
 } from "lucide-react";
 import { skills } from "../data/skills.js";
 import { projects } from "../data/projects.js";
+const phone = import.meta.env.VITE_PHONE;
+const email = import.meta.env.VITE_EMAIL;
+
 export default function HomePage() {
   return (
     <>
@@ -53,7 +56,7 @@ export default function HomePage() {
             <div className="w-[400px] h-[400px] relative inset-0">
               <div className="absolute left-[100px]  w-full h-full block bg-black/50 rounded-full z-10 "></div>
               <img
-                src="../public/images/dp3.png"
+                src="/images/dp3.png"
                 className="w-full h-full object-cover absolute inset-0 z-40  border-b-4 border-black"
                 alt="1"
               />
@@ -176,11 +179,11 @@ export default function HomePage() {
               Technologies and tools I work with to bring ideas to life.
             </p>
             <div className="w-full md:hidden block md:w-[50%]  ">
-              <img src="../public/svg/Programming-pana.svg" alt="1" />
+              <img src="/svg/Programming-pana.svg" alt="1" />
             </div>
             <ul className="flex flex-col gap-5 mt-5">
               {skills.map((skill, index) => (
-                <li className=" flex flex-col">
+                <li key={index} className=" flex flex-col">
                   <span className="flex items-center gap-3">
                     <h3 className="flex items-center gap-3">{skill.name}</h3>
                     <span className="flex px-2  hint rounded-full bg-green-500">
@@ -199,7 +202,7 @@ export default function HomePage() {
             </ul>
           </div>
           <div className="w-full hidden md:block md:w-[50%]  ">
-            <img src="../public/svg/Programming-pana.svg" alt="1" />
+            <img src="/svg/Programming-pana.svg" alt="1" />
           </div>
         </div>
       </section>
@@ -220,7 +223,7 @@ export default function HomePage() {
 
           <div className="w-full grid grid-cols-1 md:grid-cols-3 md:gap-5  mt-8">
             {projects.map((projects, index) => (
-              <div className="rounded-xl shadow-md ">
+              <div key={index} className="rounded-xl shadow-md ">
                 <div className="w-full block h-[250px] relative inset-0 rounded-xl projects overflow-hidden">
                   <img
                     src={projects.thumbnail}
@@ -283,20 +286,20 @@ export default function HomePage() {
             <ul className="mt-5">
               <li className="flex items-center hover:underline gap-3">
                 <Phone />{" "}
-                <a href="tel:+919933143951" target="_blank">
-                  +91-9933143951
+                <a href={`tel:${phone}`} target="_blank">
+                  {phone}
                 </a>
               </li>
               <div className="flex items-center hover:underline gap-3 mt-3">
                 <Mail />
-                <a href="mailto:aseshghatani4@gmail.com" target="_blank">
-                  aseshghatani4@gmail.com
+                <a href={`mailto:${email}`} target="_blank">
+                  {email}
                 </a>
               </div>
             </ul>
             <div className="flex items-center">
               <a
-                href="wa.me/919933143951"
+                href={`https://wa.me/${phone}`}
                 target="_blank"
                 className="bg-white md:w-auto w-full justify-center flex items-center gap-3 hover:bg-[#25D366] transition-all duration-300 text-black rounded-lg px-3 py-2 mt-5"
               >

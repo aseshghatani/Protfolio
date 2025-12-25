@@ -1,5 +1,8 @@
 import React from "react";
 import { CodeXml } from "lucide-react";
+const phone = import.meta.env.VITE_PHONE;
+const email = import.meta.env.VITE_EMAIL;
+
 function Navbar() {
   return (
     <nav className="w-full flex justify-center items-center fixed top-0 left-0 shadow-sm border-1 border-gray-600 z-50 bg-white/30 backdrop-blur-sm">
@@ -22,8 +25,9 @@ function Navbar() {
             <a href="#projects">Projects</a>
           </li>
         </ul>
+
         <a
-          href="https://wa.me/919933143951"
+          href={`https://wa.me/${phone}`}
           target="_blank"
           className="bg-black flex items-center gap-3 hover:bg-[#25D366] transition-all duration-300 text-white rounded-lg px-3 py-2"
         >
