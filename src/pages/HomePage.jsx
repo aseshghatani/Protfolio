@@ -9,6 +9,7 @@ import {
   ServerCrash,
   Phone,
   Mail,
+  ArrowDownToLine,
 } from "lucide-react";
 import { skills } from "../data/skills.js";
 import { projects } from "../data/projects.js";
@@ -290,12 +291,18 @@ export default function HomePage() {
                   {phone}
                 </a>
               </li>
-              <div className="flex items-center hover:underline gap-3 mt-3">
+              <li className="flex items-center hover:underline gap-3 mt-3">
                 <Mail />
                 <a href={`mailto:${email}`} target="_blank">
                   {email}
                 </a>
-              </div>
+              </li>
+              <li className="flex items-center hover:underline gap-3 mt-3">
+                <ArrowDownToLine />
+                <a href="/resume/Asesh_Resume_New.pdf" target="_blank">
+                  Download Resume
+                </a>
+              </li>
             </ul>
             <div className="flex items-center">
               <a
