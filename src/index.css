@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Outfit';
+  src: url(../public/fonts/Outfit-VariableFont_wght.ttf);
+}
+html {
+  scroll-behavior: smooth;
+}
+*{
+  font-family: 'Outfit';
+}
+h3{
+  font-size: 20px;
+}
+h2{
+  font-size: 30px;
+}
+h1{
+  font-size: 48px;
+}
+p,li,a{
+  font-size: 18px;
+}
+
+@media (max-width:768px) {
+  h1{
+    font-size: 32px;
+  }
+  h2{
+    font-size: 24px;
+  }
+  h3{
+    font-size: 18px;
+  }
+  p,li,a{
+    font-size: 14px;
+  }
+}
+.hint{
+  font-size: 14px;
+}
+  .skills{
+    width: 90%;
+    height: 4px;
+    display: block;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    border-radius: 15px;
+    
+    @apply bg-gray-600 ;
+  }
+  .skills-progress{
+    content: " ";
+    position: absolute;
+    left: 0;
+    border-radius: 15px;
+
+    top: 0;
+    display: block;
+    
+    height: 100%;
+    @apply bg-white;
+  }
+.skills:hover{
+  height: 6px;
+}
+.skills .marks{
+  position: absolute;
+  top: 5px;
+  left: 100%;
+  display: block;
+ 
+}
+img{
+  transition: all 0.3s ease-in-out;
+}
+.projects:hover >.proj-img{
+  scale:1.2;
+}
+.projects a{
+  display: none;
+  transition: all 0.3s ;
+}
+@media (max-width:768px) {
+  .projects a{
+  display: flex;
+  transition: all 0.3s ;
+}
+}
+.projects:hover a{
+  display: flex;
+}
+.projects a:hover{
+@apply bg-white text-black;
+}
