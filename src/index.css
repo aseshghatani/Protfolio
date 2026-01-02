@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base{
+
+  :root{
+     --stat-blue: 210 100% 60%;
+      --stat-green: 150 80% 50%;
+      --stat-orange: 30 100% 55%;
+  }
+}
+
 @font-face {
   font-family: 'Outfit';
   src: url(/fonts/Outfit-VariableFont_wght.ttf);
@@ -41,6 +50,58 @@ p,li,a{
 }
 .hint{
   font-size: 14px;
+}
+#skills{
+  background: #0b0b0f;
+  
+}
+.card-skill{
+  color: #f2f2f2;
+  background: #0f0f14; 
+  transition: all 0.3s ease-in-out;
+  @apply flex  relative inset-0 p-6 rounded-xl border border-gray-700 flex-col;
+}
+.card-skill:hover{
+  @apply border-white shadow-xl  shadow-[#37373c] bg-[#37373c]/50;
+}
+ /* Circular progress */
+  .circular-progress {
+    @apply relative w-20 h-20;
+  }
+
+  .circular-progress svg {
+    @apply w-full h-full -rotate-90;
+  }
+
+  .circular-progress circle {
+    fill: none;
+    stroke-width: 4;
+    stroke-linecap: round;
+  }
+
+  .circular-progress .track {
+    stroke: hsl(var(--muted));
+  }
+
+  .circular-progress .progress {
+    stroke: url(#gradient);
+    transition: stroke-dashoffset 1s ease-out;
+  }
+
+  /* Stat number */
+  .stat-number {
+    @apply text-6xl font-bold bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, 
+      hsl(var(--accent-cyan)), 
+      hsl(var(--accent-purple))
+    );
+  }
+.radial-blur{
+  
+  filter: blur(40px);
+  opacity: 0.5;
+  background: radial-gradient(circle,rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  @apply absolute  rounded-full block w-[400px] h-[400px]  ;
 }
   .skills{
     width: 90%;

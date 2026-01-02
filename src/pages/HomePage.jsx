@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import Navbar from "../components/Navbar.jsx";
 import {
@@ -11,12 +12,26 @@ import {
   Mail,
   ArrowDownToLine,
 } from "lucide-react";
-import { skills } from "../data/skills.js";
 import { projects } from "../data/projects.js";
+import Skills from "../components/Skills.jsx";
 const phone = import.meta.env.VITE_PHONE;
 const email = import.meta.env.VITE_EMAIL;
 
 export default function HomePage() {
+  const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <>
       <Navbar />
@@ -168,7 +183,8 @@ export default function HomePage() {
       </section>
 
       {/* Skills */}
-      <section
+      <Skills />
+      {/* <section
         id="skills"
         className="w-full flex justify-center items-center  bg-black "
       >
@@ -207,7 +223,7 @@ export default function HomePage() {
             <img src="/svg/Programming-pana.svg" alt="1" />
           </div>
         </div>
-      </section>
+      </section> */}
       {/* projects */}
       <section
         id="projects"

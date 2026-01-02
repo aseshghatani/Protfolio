@@ -2,48 +2,86 @@ export const skills = [
   {
     name: "HTML",
     category: "frontend",
-    level: 98,
+    path: "/images/logos/html.svg",
+    type: "language",
+  },
+  {
+    name: "php",
+    type: "language",
+  },
+  {
+    name: "python",
+    type: "language",
+  },
+  {
+    name: "VB.Net",
+    type: "language",
+  },
+  {
+    name: "Java",
+    type: "language",
   },
   {
     name: "CSS",
     category: "frontend",
-
-    level: 98,
+    path: "/images/logos/css3.png",
+    type: "language",
   },
   {
     name: "JavaScript",
     category: "frontend",
-
-    level: 98,
+    path: "/images/logos/javascript.svg",
+    type: "language",
   },
   {
     name: "React",
     category: "frontend",
-
-    level: 50,
+    path: "/images/logos/react.png",
+    type: "framework",
   },
   {
-    name: "Node. Js",
+    name: "Blade",
+    category: "frontend",
+    path: "/images/logos/blade.svg",
+    type: "framework",
+  },
+  {
+    name: "Node.Js",
     category: "backend",
-
-    level: 50,
+    path: "/images/logos/node-js.png",
+    type: "framework",
   },
   {
     name: "Laravel ",
-    category: "backend + frontend",
-
-    level: 80,
+    category: "backend",
+    path: "/images/logos/laravel.svg",
+    type: "framework",
   },
   {
     name: "MySQL ",
     category: "database",
-
-    level: 80,
+    path: "/images/logos/mysql.png",
   },
   {
-    name: "MongoDb ",
+    name: "Mongo Db ",
     category: "database",
-
-    level: 55,
+    path: "/images/logos/mongo-db.png",
+  },
+];
+export const category = [
+  {
+    name: "Frontend",
+    level: 90,
+    color: "green",
+  },
+  {
+    name: "Backend",
+    level: 80,
+    color: "blue",
+  },
+  {
+    name: "Database",
+    level: 75,
+    color: "orange",
   },
 ];
